@@ -1,11 +1,7 @@
-// src/utils/api.js
-
-const fetchDataFromBackend = async () => {
+import http from "./http";
+const getForTicket = async () => {
   try {
-    const response = await fetch(
-      "https://664f049ffafad45dfae1eaf8.mockapi.io/dummySekawan/user"
-    );
-    const data = await response.json();
+    const { data } = await http().get('/user');
     return data;
   } catch (error) {
     console.error("Error fetching data:", error);
@@ -13,4 +9,4 @@ const fetchDataFromBackend = async () => {
   }
 };
 
-export default fetchDataFromBackend;
+export default getForTicket;
