@@ -5,6 +5,7 @@ import { Formik } from 'formik'
 import * as Yup from "yup";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import { useNavigate } from 'react-router-dom';
+import FormikValidation from '../shared/FormikValidation';
 
 const validationSchema = Yup.object({
   email: Yup.string().email("Email invalid").required("Email is required"),
@@ -23,7 +24,7 @@ const LoginForm = () => {
     console.log(values)
   }
   return (
-    <Formik
+    <FormikValidation
       initialValues={{ email: '', password: '' }}
       validationSchema={validationSchema}
       onSubmit={doLogin}
@@ -91,7 +92,7 @@ const LoginForm = () => {
           </div>
         </form>
       }
-    </Formik>
+    </FormikValidation>
   )
 }
 
