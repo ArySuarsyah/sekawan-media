@@ -3,7 +3,7 @@ import { FaChartPie, FaTicketAlt, FaLightbulb, FaPhone, FaUserTie, FaBook, FaCog
 
 const SidebarNavigation = () => {
   return (
-    <div className='w-52 bg-[#3b3b3b] h-screen'>
+    <div className='w-52 bg-[#3b3b3b]'>
       <div className='flex items-center m-5 gap-2'>
         <div className='w-8 h-8 bg-blue-500 rounded-full flex justify-center items-center'>
           <div className='w-[30%] h-[30%] bg-white rounded-r-full'>

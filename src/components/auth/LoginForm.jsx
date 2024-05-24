@@ -21,7 +21,9 @@ const LoginForm = () => {
   }
 
   const doLogin = (values) => {
-    console.log(values)
+    if(values){
+      navigate('/')
+    }
   }
   return (
     <FormikValidation
